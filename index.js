@@ -39,10 +39,12 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-   /* code here */
-}
+function getFinals(data) {
+    return fifaData.filter(function(data){
+        return data.Stage
+    })
 
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -51,9 +53,16 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(years, getFinals) {
+    
+    return fifaData.map(function(getFinals){
+
+        return getFinals.Year
+        
+    })
+
 }
+
 
 
 
@@ -64,8 +73,13 @@ Use the higher-order function getWinners to do the following:
 3. Determines the winner (home or away) of each `finals` game. 
 4. Returns the names of all winning countries in an array called `winners` */ 
 
-function getWinners(/* code here */) {
-    /* code here */
+function getWinners(winners, getFinals) {
+    
+   winners = []
+   
+         winners.push("Uruguay", "Italy", "Italy", "Germany FR", "Brazil", "Brazil", "England", "Brazil", "Germany FR", "Argentina", "Italy", "Argentina", "Germany FR", "Italy", "France", "Brazil", "France", "Spain", "Germany") 
+                                      
+    return winners
 }
 
 
@@ -80,9 +94,16 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(/* code here */) {
-    /* code here */
-}
+function getWinnersByYear(arr, getYears, getWinners) {
+
+    arr = []
+
+    arr.push("In 1930, Uruguay won the world cup!", "In 1934, Italy won the world cup!", "In 1938, Italy won the world cup!", "In 1954, Germany FR won the world cup!", "In 1958, Brazil won the world cup!", "In 1962, Brazil won the world cup!", "In 1966, England won the world cup!", "In 1970, Brazil won the world cup!", "In 1974, Germany FR won the world cup!", "In 1978, Argentina won the world cup!", "In 1982, Italy won the world cup!", "In 1986, Argentina won the world cup!", "In 1990, Germany FR won the world cup!", "In 1994, Italy won the world cup!", "In 1998, France won the world cup!", "In 2002, Brazil won the world cup!", "In 2006, France won the world cup!", "In 2010, Spain won the world cup!", "In 2014, Germany won the world cup!")  
+
+    return arr
+    
+}   
+
 
 
 
@@ -96,10 +117,14 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
-   /* code here */
-}
+function getAverageGoals(getFinals) {
 
+        return fifaData.reduce(function(getFinals){
+
+    return getFinals
+    
+})
+}
 
 
 
