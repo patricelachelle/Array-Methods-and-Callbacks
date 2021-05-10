@@ -74,7 +74,15 @@ Use the higher-order function getWinners to do the following:
 4. Returns the names of all winning countries in an array called `winners` */ 
 
 function getWinners(arr, finals){
+    return finals(arr).map((fifaData) => {
+        if (fifaData['Away Team Goals'] > fifaData['Home Team Goals'])
+        return fifaData['Away Team Name'];
+        if (fifaData['Home Team Goals'] > fifaData['Away Team Goals'])
+        return fifaData['Home Team Goals'];
+        return finals['Win conditions'];
         
+    })
+
 }
 
 
