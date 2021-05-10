@@ -73,9 +73,7 @@ Use the higher-order function getWinners to do the following:
 3. Determines the winner (home or away) of each `finals` game. 
 4. Returns the names of all winning countries in an array called `winners` */ 
 
-function getWinners(winners, getFinal) {      
-
-}
+function getWinners(/* code here */) {      /* code here */ }
 
 
 
@@ -89,11 +87,7 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(arr, getYears, getWinners) {
-
-    
-    
-}   
+function getWinnersByYear(/* code here */) {    /* code here */  }   
 
 
 
@@ -108,13 +102,8 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(getFinals) {
+function getAverageGoals ( /* code here */) { /* code here */
 
-        return fifaData.reduce(function(getFinals){
-
-    return getFinals
-    
-})
 }
 
 
