@@ -97,11 +97,11 @@ hint: the strings returned need to exactly match the string in step 4.
 
 function getWinnersByYear(data, getWinners, getYears, getFinals) {
         const result = [];
-        const winner = getWinners(data, getFinals);
-        const years = getYears(data, getFinals)
+        const years = getWinners(data, getFinals);
+        const winner = getYears(data, getFinals)
 
         for(let i = 0; i < winner.length; i++) {
-            result.push(`In ${winner[i]}, ${years[i]} won the world cup!`);
+            result.push(`In ${years[i]}, ${winner[i]} won the world cup!`);
         }
         return result
 }   
