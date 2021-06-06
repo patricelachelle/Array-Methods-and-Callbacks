@@ -43,7 +43,6 @@ function getFinals() {
     return fifaData.filter(function(data){
         return data.Stage
     })
-
 }
 
 
@@ -60,11 +59,7 @@ function getYears() {
         return getFinals.Year
         
     })
-
 }
-
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use the higher-order function getWinners to do the following:  
@@ -87,11 +82,8 @@ function getWinners(arr, callback) {
             winners.push(item["Home Team Name", "Away Team Name"])
         }
     }
-
     return winners
 }
-
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -115,9 +107,6 @@ function getWinnersByYear(data, getWinners, getYears, getFinals) {
         return result
 }   
 
-
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use the higher order function getAverageGoals to do the following: 
  1. Receive the callback function getFinals from task 2 ensure you pass in the data as an argument
@@ -134,8 +123,6 @@ function getAverageGoals (data) {
      return (home + away).toFixed(2) ;
 }
 
-
-
 /// 🥅 STRETCH 🥅 ///
 
 /* 💪💪💪💪💪 Stretch 1: 💪💪💪💪💪 
@@ -150,8 +137,6 @@ function getCountryWins(/* code here */) {
 
 }
 
-
-
 /* 💪💪💪💪💪 Stretch 2: 💪💪💪💪💪 
 Write a function called getGoals() that accepts a parameter `data` and returns the team with the most goals score per appearance (average goals for) in the World Cup finals */
 
@@ -161,7 +146,6 @@ function getGoals(/* code here */) {
 
 }
 
-
 /* 💪💪💪💪💪 Stretch 3: 💪💪💪💪💪
 Write a function called badDefense() that accepts a parameter `data` and calculates the team with the most goals scored against them per appearance (average goals against) in the World Cup finals */
 
@@ -170,7 +154,6 @@ function badDefense(/* code here */) {
     /* code here */
 
 }
-
 
 /* If you still have time, use the space below to work on any stretch goals of your chosing as listed in the README file. */
 
