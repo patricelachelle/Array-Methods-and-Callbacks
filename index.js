@@ -39,7 +39,7 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(data) {
+function getFinals() {
     return fifaData.filter(function(data){
         return data.Stage
     })
@@ -53,7 +53,7 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(years, getFinals) {
+function getYears() {
     
     return fifaData.map(function(getFinals){
 
@@ -73,13 +73,22 @@ Use the higher-order function getWinners to do the following:
 3. Determines the winner (home or away) of each `finals` game. 
 4. Returns the names of all winning countries in an array called `winners` */ 
 
-function getWinners(winners){
-    winners = []
-   
-         winners.push("Uruguay", "Italy", "Italy", "Germany FR", "Brazil", "Brazil", "England", "Brazil", "Germany FR", "Argentina", "Italy", "Argentina", "Germany FR", "Italy", "France", "Brazil", "France", "Spain", "Germany") 
-                                      
-    return winners
+function getWinners(arr, callback) {
+    const winners = []
+    const result = callback(arr);
+    for (let item of result) {
+        if (item["Home Team Goals"] > item["Away Team Goals"]) {
+            winners.push(item["Home Team Name"])
+        }
+        else if (item["Home Team Goals"] < item["Away Team Goals"]) {
+            winners.push(item["Away Team Name"])
+        }
+        else {
+            winners.push(item["Home Team Name", "Away Team Name"])
+        }
+    }
 
+    return winners
 }
 
 
@@ -119,7 +128,7 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals ( data){
+function getAverageGoals (data) {
      const home = data.reduce((a, c) => a + c['Home Team Goals'], 0) / data.length;
      const away = data.reduce((a, c) => a + c['Away Team Goals'], 0) / data.length;
      return (home + away).toFixed(2) ;
