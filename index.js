@@ -114,7 +114,7 @@ function getWinnersByYear(data, getWinners, getYears, getFinals) {
         }
         return result
 }   
-console.log(getWinnersByYear(fifaData, getWinners, getYears, getFinals))
+
 
 
 
@@ -133,7 +133,7 @@ function getAverageGoals (data) {
      const away = data.reduce((a, c) => a + c['Away Team Goals'], 0) / data.length;
      return (home + away).toFixed(2) ;
 }
-console.log(getAverageGoals(fifaData));
+
 
 
 /// 🥅 STRETCH 🥅 ///
